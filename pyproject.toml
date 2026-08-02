@@ -56,7 +56,7 @@ dependencies = [
 
 [project.optional-dependencies]
 mcp = [
-    "mcp>=1.12,<2.0",
+    "mcp>=1.12,<3.0",
 ]
 dev = [
     "pytest>=8.0",
@@ -68,7 +68,7 @@ dev = [
     "mypy>=1.11",
     "pre-commit>=3.7",
     "bandit>=1.7",
-    "mcp>=1.12,<2.0",
+    "mcp>=1.12,<3.0",
 ]
 
 [project.scripts]
