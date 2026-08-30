@@ -1,4 +1,7 @@
+import re
 from pathlib import Path
+
+from surface_audit import __version__
 
 
 def test_release_container_targets_supported_linux_architectures() -> None:
@@ -11,3 +14,10 @@ def test_release_container_targets_supported_linux_architectures() -> None:
     assert buildx in workflow
     assert workflow.index(qemu) < workflow.index(buildx)
     assert "platforms: linux/amd64,linux/arm64" in workflow
+
+
+def test_pages_release_examples_match_package_version() -> None:
+    site = Path("docs/site/index.html").read_text(encoding="utf-8")
+    explicit_versions = set(re.findall(r"(?<!\d)(?:@?v)?(\d+\.\d+\.\d+)(?!\d)", site))
+
+    assert explicit_versions == {__version__}
