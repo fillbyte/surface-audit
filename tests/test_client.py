@@ -73,6 +73,16 @@ async def test_head_uses_request() -> None:
     assert route.called
 
 
+@respx.mock
+async def test_default_user_agent_uses_canonical_repository() -> None:
+    route = respx.get("https://example.com/").mock(return_value=httpx.Response(200))
+    async with HTTPClient(timeout=1.0, max_concurrency=2) as client:
+        await client.get("https://example.com/")
+
+    request = route.calls.last.request
+    assert "+https://github.com/fillbyte/surface-audit" in request.headers["User-Agent"]
+
+
 def test_retry_policy_delay_is_bounded() -> None:
     policy = RetryPolicy(attempts=5, backoff=0.5, max_delay=1.0)
     assert policy.delay(0) <= 1.0

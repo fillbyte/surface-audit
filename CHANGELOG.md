@@ -49,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Action and SARIF examples now reference the current
   `github/codeql-action/upload-sarif@v4` line.
 - Release automation now maintains the GitHub Action major tag `v1`
-  alongside versioned tags so `uses: dev-ugurkontel/surface-audit@v1`
+  alongside versioned tags so `uses: fillbyte/surface-audit@v1`
   stays valid after future releases.
 
 ### Fixed

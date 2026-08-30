@@ -47,6 +47,10 @@ def test_sarif_is_valid_json_and_has_rule(report: ScanReport) -> None:
     rules = payload["runs"][0]["tool"]["driver"]["rules"]
     assert rules[0]["id"].endswith("/security-headers")
     assert payload["runs"][0]["results"][0]["level"] == "error"
+    assert (
+        payload["runs"][0]["tool"]["driver"]["informationUri"]
+        == "https://github.com/fillbyte/surface-audit"
+    )
 
 
 def test_html_escapes_content(report: ScanReport) -> None:

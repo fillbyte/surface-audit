@@ -3,6 +3,9 @@
 This document describes how `surface-audit` releases are managed across
 PyPI, GitHub Releases, GHCR, and the reusable GitHub Action.
 
+For the one-time organization move and the required external registry setup,
+follow [`TRANSFER.md`](TRANSFER.md) before publishing another version.
+
 ## Version identifiers
 
 `surface-audit` uses two related but different versioning surfaces:
@@ -19,10 +22,10 @@ to the same release commit. Users can choose:
 
 ```yaml
 # Gets compatible bug fixes on the 1.x line automatically.
-uses: dev-ugurkontel/surface-audit@v1
+uses: fillbyte/surface-audit@v1
 
 # Pins the exact action release for maximum reproducibility.
-uses: dev-ugurkontel/surface-audit@v1.0.2
+uses: fillbyte/surface-audit@v1.0.2
 ```
 
 This follows GitHub's documented action-maintenance guidance: create
@@ -59,7 +62,7 @@ Each tagged release publishes four surfaces:
 - **GHCR**: container tags for `latest`, major, major/minor, and exact
   version, for example `latest`, `1`, `1.0`, and `1.0.2`.
 - **GitHub Action**: the repository root `action.yml`, consumed through
-  `uses: dev-ugurkontel/surface-audit@...`.
+  `uses: fillbyte/surface-audit@...`.
 
 GitHub Packages may show the GHCR image after the first successful
 container release. PyPI packages do not appear in GitHub's Packages

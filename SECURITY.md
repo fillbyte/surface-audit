@@ -11,7 +11,7 @@ secrets from the environment, or silently skipping findings —
 
 Open a private advisory on GitHub:
 
-> **[github.com/dev-ugurkontel/surface-audit/security/advisories/new](https://github.com/dev-ugurkontel/surface-audit/security/advisories/new)**
+> **[github.com/fillbyte/surface-audit/security/advisories/new](https://github.com/fillbyte/surface-audit/security/advisories/new)**
 
 GitHub Security Advisories keep the report private, track the fix
 through a CVE if one is warranted, and coordinate disclosure.

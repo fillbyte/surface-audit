@@ -6,9 +6,11 @@ on:
       - "v*.*.*"
 
 permissions:
-  contents: write
-  packages: write
-  id-token: write # required for PyPI Trusted Publishing and sigstore
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 # Actions are pinned to immutable commit SHAs per GitHub's security
 # hardening guidance. Comments retain the human-readable upstream
@@ -37,10 +39,18 @@ jobs:
           python -m pip install -e .
           cyclonedx-py environment --output-format json --output-file dist/sbom.cdx.json
 
-      - name: Upload distribution artifacts
+      - name: Upload Python distributions
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: dist
+          name: python-distributions
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: release-artifacts
           path: dist/
 
   publish-pypi:
@@ -50,17 +60,13 @@ jobs:
     environment:
       name: pypi
       url: https://pypi.org/p/surface-audit
+    permissions:
+      id-token: write
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: dist
+          name: python-distributions
           path: dist/
-
-      - name: Keep only wheels and sdists for PyPI upload
-        # The build job ships both the Python distributions and the
-        # CycloneDX SBOM under dist/. PyPI only accepts .whl and .tar.gz;
-        # anything else makes twine reject the entire batch.
-        run: find dist/ -type f ! -name "*.whl" ! -name "*.tar.gz" -delete
 
       - name: Publish via Trusted Publishing (OIDC)
         uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b # release/v1
@@ -103,7 +109,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          provenance: false
+          provenance: mode=max
+          sbom: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
@@ -111,12 +118,15 @@ jobs:
     name: Sign artifacts and create GitHub Release
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: dist
+          name: release-artifacts
           path: dist/
 
       - name: Sign distributions with sigstore

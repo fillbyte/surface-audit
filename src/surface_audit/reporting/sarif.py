@@ -19,7 +19,7 @@ def render_sarif(report: ScanReport) -> str:
                 "tool": {
                     "driver": {
                         "name": "surface-audit",
-                        "informationUri": "https://github.com/dev-ugurkontel/surface-audit",
+                        "informationUri": "https://github.com/fillbyte/surface-audit",
                         "rules": _rules(report),
                     }
                 },

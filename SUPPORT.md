@@ -14,9 +14,9 @@ Use GitHub Discussions for:
 
 Start here:
 
-- Q&A: <https://github.com/dev-ugurkontel/surface-audit/discussions/categories/q-a>
-- Ideas: <https://github.com/dev-ugurkontel/surface-audit/discussions/categories/ideas>
-- Show and tell: <https://github.com/dev-ugurkontel/surface-audit/discussions/categories/show-and-tell>
+- Q&A: <https://github.com/fillbyte/surface-audit/discussions/categories/q-a>
+- Ideas: <https://github.com/fillbyte/surface-audit/discussions/categories/ideas>
+- Show and tell: <https://github.com/fillbyte/surface-audit/discussions/categories/show-and-tell>
 
 ## Open an issue when
 
@@ -34,7 +34,7 @@ Start here:
 Use the private security reporting flow instead:
 
 - [`SECURITY.md`](SECURITY.md)
-- <https://github.com/dev-ugurkontel/surface-audit/security/advisories/new>
+- <https://github.com/fillbyte/surface-audit/security/advisories/new>
 
 ## Contribution fit
 

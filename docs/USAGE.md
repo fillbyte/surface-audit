@@ -168,9 +168,11 @@ Precedence: **CLI flag > file > built-in default**.
 import asyncio
 from surface_audit import Scanner
 
+
 async def main() -> None:
     report = await Scanner("https://example.com").run()
     print(len(report.findings), "findings")
+
 
 asyncio.run(main())
 ```
@@ -181,6 +183,7 @@ asyncio.run(main())
 import asyncio
 from surface_audit import Scanner, ScannerConfig
 
+
 async def main() -> None:
     config = ScannerConfig(
         timeout=5.0,
@@ -190,6 +193,7 @@ async def main() -> None:
     )
     report = await Scanner("https://example.com", config=config).run()
     print(report.max_severity())
+
 
 asyncio.run(main())
 ```

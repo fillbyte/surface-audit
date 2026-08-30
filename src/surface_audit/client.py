@@ -38,9 +38,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_USER_AGENT = (
-    f"surface-audit/{_PKG_VERSION} (+https://github.com/dev-ugurkontel/surface-audit)"
-)
+DEFAULT_USER_AGENT = f"surface-audit/{_PKG_VERSION} (+https://github.com/fillbyte/surface-audit)"
 
 _RETRY_STATUS: frozenset[int] = frozenset({408, 425, 429, 500, 502, 503, 504})
 
