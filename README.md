@@ -247,7 +247,6 @@ scorecard, and design patterns.
 - [`docs/USAGE.md`](docs/USAGE.md) — CLI, library, and CI recipes
 - [`docs/RECIPES.md`](docs/RECIPES.md) — preview, SARIF, baseline, MCP, and action recipes
 - [`docs/RELEASE.md`](docs/RELEASE.md) — PyPI, GHCR, GitHub Release, and `v1` tag process
-- [`docs/TRANSFER.md`](docs/TRANSFER.md) — one-time GitHub, PyPI, Pages, and GHCR transfer runbook
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — layering and extension points
 - [`docs/SCHEMA.md`](docs/SCHEMA.md) — JSON report contract
 - [`examples/plugin-template`](examples/plugin-template) — starter template for third-party checks
