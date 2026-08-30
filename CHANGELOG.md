@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-08-30
+
+### Fixed
+
+- PyPI publishing now uses the pinned v1.14.2 publisher action, which validates
+  and uploads Core Metadata 2.5 distributions.
+- GHCR publishing now creates a dedicated Buildx builder before generating
+  maximum provenance and SBOM attestations.
+
 ## [1.0.3] - 2026-08-30
 
 ### Added
