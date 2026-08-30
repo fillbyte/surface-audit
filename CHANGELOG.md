@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-08-30
+
+### Changed
+
+- GitHub Actions now use the pinned `actions/checkout` v7.0.1,
+  `actions/setup-python` v7.0.0, Docker login v4.6.0, Docker metadata
+  v6.2.0, Docker build/push v7.3.0, and Sigstore signing v3.5.0 releases.
+- The container now receives Python 3.12 patch and security fixes from the
+  3.12.14 slim base image while preserving the supported runtime line.
+- Dependabot now keeps MCP on the compatible v1 API and Python containers on
+  the tested 3.12 line until dedicated compatibility migrations are complete.
+
 ## [1.0.4] - 2026-08-30
 
 ### Fixed
