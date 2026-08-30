@@ -9,8 +9,8 @@ updates:
       # MCP 2 removes the v1 FastMCP module used by the server. Keep receiving
       # v1 security and maintenance updates until the API migration is tested.
       - dependency-name: mcp
-        update-types:
-          - "version-update:semver-major"
+        versions:
+          - ">= 2"
 
   - package-ecosystem: github-actions
     directory: "/"
