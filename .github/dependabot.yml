@@ -5,6 +5,12 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      # MCP 2 removes the v1 FastMCP module used by the server. Keep receiving
+      # v1 security and maintenance updates until the API migration is tested.
+      - dependency-name: mcp
+        update-types:
+          - "version-update:semver-major"
 
   - package-ecosystem: github-actions
     directory: "/"
@@ -17,3 +23,9 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      # Python 3.13+ adoption must update the declared support matrix and run
+      # container smoke tests; continue accepting patches on the 3.12 line.
+      - dependency-name: python
+        versions:
+          - ">= 3.13"
