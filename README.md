@@ -262,7 +262,7 @@ make install   # set up .venv with dev extras
 make all       # ruff + mypy + bandit + pytest
 ```
 
-CI runs on every push across Python 3.10 – 3.13 — see
+CI runs on every push across Python 3.10 – 3.14 — see
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 
 ## License
