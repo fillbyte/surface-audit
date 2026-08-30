@@ -126,7 +126,7 @@ surface-audit scan https://preview.example.com \
           <div class="rule"></div>
           <p>
             <code>@v1</code> is the stable 1.x action line. It moves to the newest compatible
-            release, so users get patch and minor fixes. <code>@v1.0.2</code> is an exact release
+            release, so users get patch and minor fixes. <code>@v1.0.3</code> is an exact release
             tag for workflows that need maximum reproducibility.
           </p>
           <pre class="code-block">- name: Run surface-audit
@@ -146,10 +146,10 @@ surface-audit scan https://preview.example.com \
           <h2>There are four names because there are four distribution surfaces.</h2>
           <div class="rule"></div>
           <div class="matrix" role="list">
-            <div role="listitem"><strong>PyPI</strong><span><code>1.0.2</code> is the Python package version.</span></div>
-            <div role="listitem"><strong>GitHub Release</strong><span><code>v1.0.2</code> marks the exact release commit and assets.</span></div>
+            <div role="listitem"><strong>PyPI</strong><span><code>1.0.3</code> is the Python package version.</span></div>
+            <div role="listitem"><strong>GitHub Release</strong><span><code>v1.0.3</code> marks the exact release commit and assets.</span></div>
             <div role="listitem"><strong>GitHub Action</strong><span><code>v1</code> moves to the latest compatible 1.x action release.</span></div>
-            <div role="listitem"><strong>GHCR</strong><span><code>1</code>, <code>1.0</code>, <code>1.0.2</code>, and <code>latest</code> are container image tags.</span></div>
+            <div role="listitem"><strong>GHCR</strong><span><code>1</code>, <code>1.0</code>, <code>1.0.3</code>, and <code>latest</code> are container image tags.</span></div>
           </div>
         </section>
 

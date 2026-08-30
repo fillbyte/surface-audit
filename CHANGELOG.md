@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-08-30
+
 ### Added
 
 - The project site now uses a simpler, text-first design and explains
@@ -21,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Canonical repository, Pages, GitHub Action, GHCR, schema, SARIF, and package
+  metadata now use the `fillbyte/surface-audit` organization identity while
+  preserving personal authorship and sponsorship attribution.
+- Release automation now uses least-privilege job permissions, a PyPI-only
+  distribution artifact, and explicit GHCR provenance and SBOM generation.
 - `docs/RELEASE.md` now explicitly distinguishes PyPI versions, GitHub
   Release tags, moving GitHub Action tags, and GHCR image tags.
 - `make clean` now removes nested `__pycache__` directories and the
