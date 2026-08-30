@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-08-30
+
+### Fixed
+
+- GHCR releases now publish native `linux/amd64` and `linux/arm64` images, so
+  the documented container command works on both standard Linux runners and
+  Apple Silicon hosts without an emulation flag.
+- Release regression coverage now protects the QEMU/Buildx ordering and the
+  two-architecture publication contract.
+
 ## [1.0.5] - 2026-08-30
 
 ### Changed
