@@ -7,14 +7,14 @@ PyPI, GitHub Releases, GHCR, and the reusable GitHub Action.
 
 `surface-audit` uses two related but different versioning surfaces:
 
-- **Package release tags** such as `v1.0.6` are immutable release
+- **Package release tags** such as `v1.0.7` are immutable release
   markers for the Python package, GitHub Release assets, SBOMs,
   signatures, and GHCR image tags.
 - **Major action tags** such as `v1` are moving compatibility tags for
   the reusable GitHub Action. `v1` points to the latest compatible
   `1.x` release, not specifically to `v1.0.0`.
 
-For example, after `v1.0.6` was released, both `v1.0.6` and `v1` point
+For example, after `v1.0.7` was released, both `v1.0.7` and `v1` point
 to the same release commit. Users can choose:
 
 ```yaml
@@ -22,31 +22,31 @@ to the same release commit. Users can choose:
 uses: fillbyte/surface-audit@v1
 
 # Pins the exact action release for maximum reproducibility.
-uses: fillbyte/surface-audit@v1.0.6
+uses: fillbyte/surface-audit@v1.0.7
 ```
 
 This follows GitHub's documented action-maintenance guidance: create
 semantic version tags such as `v1.1.3` and keep major tags such as `v1`
 current with the latest compatible release.
 
-## Why `1`, `1.0`, `1.0.6`, `v1`, and `v1.0.6` all exist
+## Why `1`, `1.0`, `1.0.7`, `v1`, and `v1.0.7` all exist
 
 The same release is named differently depending on where users consume
 it:
 
 | Surface | Example | Meaning |
 | ------- | ------- | ------- |
-| PyPI package | `1.0.6` | Exact Python package version installed by `pip` or `pipx`. |
-| GitHub Release tag | `v1.0.6` | Exact release commit and assets. The `v` prefix is a Git tag convention. |
+| PyPI package | `1.0.7` | Exact Python package version installed by `pip` or `pipx`. |
+| GitHub Release tag | `v1.0.7` | Exact release commit and assets. The `v` prefix is a Git tag convention. |
 | GitHub Action tag | `v1` | Moving major tag for the latest compatible `1.x` action release. |
-| GHCR image tag | `1.0.6` | Exact container image for one release. |
+| GHCR image tag | `1.0.7` | Exact container image for one release. |
 | GHCR image tag | `1.0` | Moving image tag for the latest compatible `1.0.x` patch. |
 | GHCR image tag | `1` | Moving image tag for the latest compatible `1.x` image. |
 | GHCR image tag | `latest` | Convenience image tag for the newest stable release. |
 
 So `v1` does not mean "the original `v1.0.0` forever." It means "the
-latest compatible release on the `1.x` line." After `v1.0.6`, it is
-normal for `v1` to point at the same commit as `v1.0.6`.
+latest compatible release on the `1.x` line." After `v1.0.7`, it is
+normal for `v1` to point at the same commit as `v1.0.7`.
 
 ## Channels
 
@@ -57,7 +57,7 @@ Each tagged release publishes four surfaces:
 - **GitHub Releases**: wheel, sdist, CycloneDX SBOM, and Sigstore
   bundles.
 - **GHCR**: container tags for `latest`, major, major/minor, and exact
-  version, for example `latest`, `1`, `1.0`, and `1.0.6`.
+  version, for example `latest`, `1`, `1.0`, and `1.0.7`.
 - **GitHub Action**: the repository root `action.yml`, consumed through
   `uses: fillbyte/surface-audit@...`.
 
@@ -87,7 +87,7 @@ Changes to `main` go through a pull request. The branch rules require:
 
 - one approving review
 - code owner review
-- required status checks for Python 3.10, 3.11, 3.12, 3.13, distribution
+- required status checks for Python 3.10, 3.11, 3.12, 3.13, 3.14, distribution
   build, and the Python and Actions CodeQL analyses
 - linear history and squash merges
 
@@ -124,7 +124,7 @@ git push origin refs/tags/v1 --force
 ```
 
 Force-updating `v1` is expected because it is a moving compatibility
-tag. Exact tags such as `v1.0.6` should only be moved to recover from a
+tag. Exact tags such as `v1.0.7` should only be moved to recover from a
 failed release before users depend on it; normal releases should create
 a new exact tag.
 
