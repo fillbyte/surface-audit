@@ -34,7 +34,7 @@ or companion repository is often the best path.
 ## Development workflow
 
 ```bash
-git clone https://github.com/dev-ugurkontel/surface-audit.git
+git clone https://github.com/fillbyte/surface-audit.git
 cd surface-audit
 make install   # creates .venv, installs dev extras, sets up pre-commit
 make all       # ruff + format check + mypy + bandit + pytest (100%)

@@ -15,7 +15,7 @@
       property="og:description"
       content="A bounded, CI-friendly security smoke test for preview and staging URLs."
     />
-    <meta property="og:url" content="https://dev-ugurkontel.github.io/surface-audit/" />
+    <meta property="og:url" content="https://fillbyte.github.io/surface-audit/" />
     <meta property="og:site_name" content="surface-audit" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="surface-audit" />
@@ -23,7 +23,7 @@
       name="twitter:description"
       content="Deterministic security smoke tests for known preview, staging, and pre-deploy URLs."
     />
-    <link rel="canonical" href="https://dev-ugurkontel.github.io/surface-audit/" />
+    <link rel="canonical" href="https://fillbyte.github.io/surface-audit/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,8 +39,8 @@
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "macOS, Linux, Windows",
         "description": "Deterministic security smoke tests for known preview, staging, and pre-deploy URLs.",
-        "url": "https://github.com/dev-ugurkontel/surface-audit",
-        "license": "https://github.com/dev-ugurkontel/surface-audit/blob/main/LICENSE",
+        "url": "https://github.com/fillbyte/surface-audit",
+        "license": "https://github.com/fillbyte/surface-audit/blob/main/LICENSE",
         "downloadUrl": "https://pypi.org/project/surface-audit/"
       }
     </script>
@@ -48,12 +48,12 @@
   <body>
     <div class="wrap">
       <header class="topbar">
-        <a class="brand" href="https://github.com/dev-ugurkontel/surface-audit">surface-audit</a>
+        <a class="brand" href="https://github.com/fillbyte/surface-audit">surface-audit</a>
         <nav aria-label="Primary">
-          <a href="https://github.com/dev-ugurkontel/surface-audit">GitHub</a>
+          <a href="https://github.com/fillbyte/surface-audit">GitHub</a>
           <a href="https://pypi.org/project/surface-audit/">PyPI</a>
-          <a href="https://github.com/dev-ugurkontel/surface-audit/blob/main/docs/RECIPES.md">Recipes</a>
-          <a href="https://github.com/dev-ugurkontel/surface-audit/releases">Releases</a>
+          <a href="https://github.com/fillbyte/surface-audit/blob/main/docs/RECIPES.md">Recipes</a>
+          <a href="https://github.com/fillbyte/surface-audit/releases">Releases</a>
         </nav>
       </header>
 
@@ -68,7 +68,7 @@
           </p>
           <div class="actions">
             <a class="button primary" href="https://pypi.org/project/surface-audit/">Install from PyPI</a>
-            <a class="button" href="https://github.com/dev-ugurkontel/surface-audit#github-action">Use the action</a>
+            <a class="button" href="https://github.com/fillbyte/surface-audit#github-action">Use the action</a>
           </div>
           <div class="facts" aria-label="Project facts">
             <div><strong>bounded</strong><span>known target URL</span></div>
@@ -130,7 +130,7 @@ surface-audit scan https://preview.example.com \
             tag for workflows that need maximum reproducibility.
           </p>
           <pre class="code-block">- name: Run surface-audit
-  uses: dev-ugurkontel/surface-audit@v1
+  uses: fillbyte/surface-audit@v1
   with:
     target: ${{ steps.preview.outputs.url }}
     scope-hosts: preview.example.com
@@ -191,10 +191,10 @@ LOW      directory-listing    Auto-generated index page exposed</pre>
           <h2>Start small, then go deeper only when needed.</h2>
           <div class="rule"></div>
           <div class="links">
-            <a href="https://github.com/dev-ugurkontel/surface-audit/blob/main/README.md"><strong>README</strong><span>Positioning, quick start, and common paths.</span></a>
-            <a href="https://github.com/dev-ugurkontel/surface-audit/blob/main/docs/RECIPES.md"><strong>Recipes</strong><span>Preview gates, baselines, SARIF, MCP, and Docker.</span></a>
-            <a href="https://github.com/dev-ugurkontel/surface-audit/blob/main/docs/RELEASE.md"><strong>Release process</strong><span>PyPI, GHCR, GitHub Releases, and action tags.</span></a>
-            <a href="https://github.com/dev-ugurkontel/surface-audit/blob/main/SUPPORT.md"><strong>Support</strong><span>Where to ask, propose, or report privately.</span></a>
+            <a href="https://github.com/fillbyte/surface-audit/blob/main/README.md"><strong>README</strong><span>Positioning, quick start, and common paths.</span></a>
+            <a href="https://github.com/fillbyte/surface-audit/blob/main/docs/RECIPES.md"><strong>Recipes</strong><span>Preview gates, baselines, SARIF, MCP, and Docker.</span></a>
+            <a href="https://github.com/fillbyte/surface-audit/blob/main/docs/RELEASE.md"><strong>Release process</strong><span>PyPI, GHCR, GitHub Releases, and action tags.</span></a>
+            <a href="https://github.com/fillbyte/surface-audit/blob/main/SUPPORT.md"><strong>Support</strong><span>Where to ask, propose, or report privately.</span></a>
           </div>
         </section>
       </main>

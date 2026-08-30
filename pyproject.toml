@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.26"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
@@ -8,7 +8,8 @@ version = "1.0.2"
 description = "Deterministic web security smoke tests for preview, staging, and pre-deploy URLs."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "LICENSE" }
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
 authors = [{ name = "Uğur Kontel" }]
 keywords = [
     "security",
@@ -35,7 +36,6 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Intended Audience :: Information Technology",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -95,13 +95,13 @@ cross_origin_isolation = "surface_audit.checks.cross_origin_isolation:CrossOrigi
 open_redirect = "surface_audit.checks.open_redirect:OpenRedirectCheck"
 
 [project.urls]
-Homepage = "https://dev-ugurkontel.github.io/surface-audit/"
-Repository = "https://github.com/dev-ugurkontel/surface-audit"
-Issues = "https://github.com/dev-ugurkontel/surface-audit/issues"
-Documentation = "https://dev-ugurkontel.github.io/surface-audit/"
-Discussions = "https://github.com/dev-ugurkontel/surface-audit/discussions"
-Support = "https://github.com/dev-ugurkontel/surface-audit/blob/main/SUPPORT.md"
-Changelog = "https://github.com/dev-ugurkontel/surface-audit/blob/main/CHANGELOG.md"
+Homepage = "https://fillbyte.github.io/surface-audit/"
+Repository = "https://github.com/fillbyte/surface-audit"
+Issues = "https://github.com/fillbyte/surface-audit/issues"
+Documentation = "https://fillbyte.github.io/surface-audit/"
+Discussions = "https://github.com/fillbyte/surface-audit/discussions"
+Support = "https://github.com/fillbyte/surface-audit/blob/main/SUPPORT.md"
+Changelog = "https://github.com/fillbyte/surface-audit/blob/main/CHANGELOG.md"
 Funding = "https://github.com/sponsors/dev-ugurkontel"
 
 [tool.hatch.build.targets.wheel]

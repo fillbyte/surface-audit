@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability (private)
-    url: https://github.com/dev-ugurkontel/surface-audit/security/advisories/new
+    url: https://github.com/fillbyte/surface-audit/security/advisories/new
     about: For vulnerabilities in surface-audit itself, please report privately.
   - name: Support guide
-    url: https://github.com/dev-ugurkontel/surface-audit/blob/main/SUPPORT.md
+    url: https://github.com/fillbyte/surface-audit/blob/main/SUPPORT.md
     about: Where to ask questions, propose ideas, and report the right kind of issue.
   - name: Q&A discussions
-    url: https://github.com/dev-ugurkontel/surface-audit/discussions/categories/q-a
+    url: https://github.com/fillbyte/surface-audit/discussions/categories/q-a
     about: Ask usage and integration questions here.
   - name: Ideas discussions
-    url: https://github.com/dev-ugurkontel/surface-audit/discussions/categories/ideas
+    url: https://github.com/fillbyte/surface-audit/discussions/categories/ideas
     about: Share broader ideas before opening a larger PR.

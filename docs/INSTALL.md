@@ -37,7 +37,7 @@ pip install surface-audit
 ## 3. From source (for contributors)
 
 ```bash
-git clone https://github.com/dev-ugurkontel/surface-audit.git
+git clone https://github.com/fillbyte/surface-audit.git
 cd surface-audit
 python3 -m venv .venv
 source .venv/bin/activate

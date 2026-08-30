@@ -102,7 +102,7 @@
       ],
       "tool": {
         "driver": {
-          "informationUri": "https://github.com/dev-ugurkontel/surface-audit",
+          "informationUri": "https://github.com/fillbyte/surface-audit",
           "name": "surface-audit",
           "rules": [
             {

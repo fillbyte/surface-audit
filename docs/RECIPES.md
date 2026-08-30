@@ -58,7 +58,7 @@ The repository now ships a reusable action at the repo root:
 
 ```yaml
 - name: Run surface-audit
-  uses: dev-ugurkontel/surface-audit@v1
+  uses: fillbyte/surface-audit@v1
   with:
     target: ${{ steps.preview.outputs.url }}
     scope-hosts: preview.example.com
@@ -189,8 +189,8 @@ Tagged releases are also configured to publish a container image to
 GHCR so teams can standardize on a pinned image in CI:
 
 ```bash
-docker pull ghcr.io/dev-ugurkontel/surface-audit:latest
-docker run --rm ghcr.io/dev-ugurkontel/surface-audit:latest \
+docker pull ghcr.io/fillbyte/surface-audit:latest
+docker run --rm ghcr.io/fillbyte/surface-audit:latest \
     scan https://example.com --fail-on HIGH
 ```
 

@@ -1,10 +1,10 @@
 # surface-audit
 
-[![CI](https://github.com/dev-ugurkontel/surface-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/dev-ugurkontel/surface-audit/actions/workflows/ci.yml)
+[![CI](https://github.com/fillbyte/surface-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/fillbyte/surface-audit/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/surface-audit.svg)](https://pypi.org/project/surface-audit/)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpypistats.org%2Fapi%2Fpackages%2Fsurface-audit%2Frecent&query=%24.data.last_month&label=downloads&suffix=%2Fmo&color=brightgreen)](https://pypistats.org/packages/surface-audit)
-[![Release](https://img.shields.io/github/v/release/dev-ugurkontel/surface-audit?label=release&color=blue)](https://github.com/dev-ugurkontel/surface-audit/releases)
-[![Last commit](https://img.shields.io/github/last-commit/dev-ugurkontel/surface-audit?color=green)](https://github.com/dev-ugurkontel/surface-audit/commits/main)
+[![Release](https://img.shields.io/github/v/release/fillbyte/surface-audit?label=release&color=blue)](https://github.com/fillbyte/surface-audit/releases)
+[![Last commit](https://img.shields.io/github/last-commit/fillbyte/surface-audit?color=green)](https://github.com/fillbyte/surface-audit/commits/main)
 [![Python](https://img.shields.io/pypi/pyversions/surface-audit.svg)](https://pypi.org/project/surface-audit/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Checked with mypy](https://img.shields.io/badge/mypy-strict-blue)](https://mypy.readthedocs.io/)
@@ -78,7 +78,7 @@ Container-first teams can use the published GHCR image on tagged
 releases:
 
 ```bash
-docker run --rm ghcr.io/dev-ugurkontel/surface-audit:latest \
+docker run --rm ghcr.io/fillbyte/surface-audit:latest \
     scan https://preview.example.com --fail-on HIGH
 ```
 
@@ -116,7 +116,7 @@ in a preview-environment workflow without hand-rolling install steps:
 
 ```yaml
 - name: Run surface-audit
-  uses: dev-ugurkontel/surface-audit@v1
+  uses: fillbyte/surface-audit@v1
   with:
     target: ${{ steps.preview.outputs.url }}
     scope-hosts: preview.example.com
@@ -199,10 +199,10 @@ host allow-list.
 The project site highlights the smoke-test workflow, GitHub Action,
 sample artifacts, and core adoption patterns:
 
-- [Project landing page](https://dev-ugurkontel.github.io/surface-audit/)
-- [Console sample](https://dev-ugurkontel.github.io/surface-audit/samples/preview-report.console.txt)
-- [HTML sample](https://dev-ugurkontel.github.io/surface-audit/samples/preview-report.html)
-- [SARIF sample](https://dev-ugurkontel.github.io/surface-audit/samples/preview-report.sarif.json)
+- [Project landing page](https://fillbyte.github.io/surface-audit/)
+- [Console sample](https://fillbyte.github.io/surface-audit/samples/preview-report.console.txt)
+- [HTML sample](https://fillbyte.github.io/surface-audit/samples/preview-report.html)
+- [SARIF sample](https://fillbyte.github.io/surface-audit/samples/preview-report.sarif.json)
 
 Download trends remain available via
 [PyPI Stats](https://pypistats.org/packages/surface-audit).
@@ -213,6 +213,7 @@ Download trends remain available via
 import asyncio
 from surface_audit import Scanner, ScannerConfig
 
+
 async def main() -> None:
     report = await Scanner(
         "https://example.com",
@@ -220,6 +221,7 @@ async def main() -> None:
     ).run()
     for finding in report.findings:
         print(finding.severity.value, finding.check_id, finding.title)
+
 
 asyncio.run(main())
 ```
@@ -245,6 +247,7 @@ scorecard, and design patterns.
 - [`docs/USAGE.md`](docs/USAGE.md) — CLI, library, and CI recipes
 - [`docs/RECIPES.md`](docs/RECIPES.md) — preview, SARIF, baseline, MCP, and action recipes
 - [`docs/RELEASE.md`](docs/RELEASE.md) — PyPI, GHCR, GitHub Release, and `v1` tag process
+- [`docs/TRANSFER.md`](docs/TRANSFER.md) — one-time GitHub, PyPI, Pages, and GHCR transfer runbook
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — layering and extension points
 - [`docs/SCHEMA.md`](docs/SCHEMA.md) — JSON report contract
 - [`examples/plugin-template`](examples/plugin-template) — starter template for third-party checks

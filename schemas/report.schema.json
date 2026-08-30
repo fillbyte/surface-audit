@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/dev-ugurkontel/surface-audit/schemas/report.schema.json",
+  "$id": "https://github.com/fillbyte/surface-audit/schemas/report.schema.json",
   "title": "surface-audit report",
   "description": "Stable contract for the JSON output of `surface-audit scan -f json`.",
   "type": "object",

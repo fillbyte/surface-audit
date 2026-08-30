@@ -1,3 +1,10 @@
 # Default owners for everything in the repo.
-# Code owner reviews on `main` are assigned to @dev-ugurkontel.
+# The personal maintainer identity remains valid after the repository moves
+# into the fillbyte organization and must retain explicit write access.
 *       @dev-ugurkontel
+
+# Make ownership of governance and release-control surfaces explicit.
+/.github/           @dev-ugurkontel
+/pyproject.toml     @dev-ugurkontel
+/docs/RELEASE.md    @dev-ugurkontel
+/docs/TRANSFER.md   @dev-ugurkontel
