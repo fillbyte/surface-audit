@@ -3,9 +3,6 @@
 This document describes how `surface-audit` releases are managed across
 PyPI, GitHub Releases, GHCR, and the reusable GitHub Action.
 
-For the one-time organization move and the required external registry setup,
-follow [`TRANSFER.md`](TRANSFER.md) before publishing another version.
-
 ## Version identifiers
 
 `surface-audit` uses two related but different versioning surfaces:
@@ -90,8 +87,8 @@ Changes to `main` go through a pull request. The branch rules require:
 
 - one approving review
 - code owner review
-- required status checks for Python 3.10, 3.11, 3.12, 3.13, and build
-  distribution
+- required status checks for Python 3.10, 3.11, 3.12, 3.13, distribution
+  build, and the Python and Actions CodeQL analyses
 - linear history and squash merges
 
 The `pypi` environment requires maintainer approval before the PyPI

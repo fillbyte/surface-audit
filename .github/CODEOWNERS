@@ -1,10 +1,7 @@
-# Default owners for everything in the repo.
-# The personal maintainer identity remains valid after the repository moves
-# into the fillbyte organization and must retain explicit write access.
+# Default owner for everything in the repository.
 *       @dev-ugurkontel
 
 # Make ownership of governance and release-control surfaces explicit.
 /.github/           @dev-ugurkontel
 /pyproject.toml     @dev-ugurkontel
 /docs/RELEASE.md    @dev-ugurkontel
-/docs/TRANSFER.md   @dev-ugurkontel
