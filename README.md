@@ -83,7 +83,7 @@ docker run --rm ghcr.io/fillbyte/surface-audit:latest \
 ```
 
 Use the GitHub Action `@v1` tag for the stable major line, or pin an
-exact action release such as `@v1.0.2` when you want fully reproducible
+exact action release such as `@v1.0.3` when you want fully reproducible
 workflow inputs. Tagged releases also publish GitHub Release artifacts,
 CycloneDX SBOMs, and Sigstore signatures.
 

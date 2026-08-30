@@ -73,7 +73,7 @@ The repository now ships a reusable action at the repo root:
 ```
 
 Use `@v1` for the stable major line, or pin an exact action version
-such as `@v1.0.2` when you want fully reproducible workflow inputs.
+such as `@v1.0.3` when you want fully reproducible workflow inputs.
 
 ## Preview workflow with baseline diff and SARIF upload
 
@@ -111,7 +111,7 @@ jobs:
         run: echo "url=https://preview.example.com" >> "$GITHUB_OUTPUT"
 
       - name: Install surface-audit
-        run: python -m pip install surface-audit==1.0.2
+        run: python -m pip install surface-audit==1.0.3
 
       - name: Capture current JSON report
         run: |
@@ -194,5 +194,5 @@ docker run --rm ghcr.io/fillbyte/surface-audit:latest \
     scan https://example.com --fail-on HIGH
 ```
 
-Use `:latest` for convenience or a versioned tag such as `:1.0.2` when
+Use `:latest` for convenience or a versioned tag such as `:1.0.3` when
 you want an immutable container reference.
